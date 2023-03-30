@@ -18,12 +18,14 @@ Hardhat can be installed with npm or yarn as the package manager, however npm is
 
 Once you have the necessary components setup, you can pull this repository to your local machine and compile, test and deploy to the local Hardhat network. The commands are as follows:
 
-``` Setup hardhat and install necessary project dependencies
+Setup hardhat and install necessary project dependencies
+``` 
 npm install --save-dev hardhat
 npm install --save-dev @nomicfoundation/hardhat-toolbox
 npm install --save-dev @nomicfoundation/hardhat-chai-matchers
 ```
-``` Compile, test, deploy
+Compile, test, deploy
+``` 
 npx hardhat compile
 npx hardhat test
 REPORT_GAS=true npx hardhat test
@@ -34,7 +36,7 @@ npx hardhat run scripts/deploy.js
 ### Test Suite
 
 ##### Ownership Test
-The first test asserts that the Game contract is owned by the address which dpeloyed the contract.
+The first test asserts that the Game contract is owned by the address which deployed the contract.
 
 The second test asserts that the owner of the MatterToken contract is owned by the Game contract because the MatterToken contract is deployed by Game.sol.
 
@@ -51,6 +53,9 @@ Scenario simulation were divided into losses and wins:
 ##### Gas Reporting
 
 A gas report was produced on hardhat and both public functions are using far below the BlockGasLimit at 7.6%. Further gas optimization strategies are welcome. Gas Report below.
+
+<img width="734" alt="image" src="https://user-images.githubusercontent.com/78215404/228953176-4b6f008f-5e9c-402c-b0a0-0827085af265.png">
+
 
 ##### Event emittance
 Events are emitted upon loss and win. Tests to check both cases with corresponding event arguments. The loss test checks with 1 incorrect guess. The win test case uses a loss then a win and checks the Winner log.
