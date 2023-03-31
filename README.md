@@ -27,11 +27,12 @@ npm install --save-dev @nomicfoundation/hardhat-chai-matchers
 Compile, test, deploy
 ``` 
 npx hardhat compile
-npx hardhat test
-REPORT_GAS=true npx hardhat test
+npx hardhat test --network hardhat
+REPORT_GAS=true npx hardhat test --network hardhat
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+Please note that testing must be done on the hardhat network because the fixtures are not setup to deploy on zkSync but rather just the local simulated HRE.
 
 ### Test Suite
 

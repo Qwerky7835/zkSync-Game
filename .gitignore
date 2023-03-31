@@ -9,3 +9,7 @@ typechain-types
 cache
 artifacts
 
+# ZK files
+artifacts-zk
+cache-zk
+
