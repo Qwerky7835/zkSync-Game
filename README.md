@@ -1,10 +1,8 @@
 # zkSync Game
 
-zkSnyc Game is a dApp which lets players guess a secret number and pays eth and custom tokens if the number is guessed correctly. Live version [here]()!
+zkSnyc Game is a dApp which lets players guess a secret number and pays eth and custom tokens if the number is guessed correctly. Live version [here](https://rococo-sprite-0d206f.netlify.app/)! Deployed through curtesy of [Netlify](https://www.netlify.com/).
 
 This dApp is a full stack project with a React frontend, connected to Solidity smart contract with the nifty [zksync-web3](https://www.npmjs.com/package/zksync-web3) and deployed on the zksync testnet. In order to demonstrate the full development lifecycle, this project comes with two Solidity contracts (Game.sol and MatterToken.sol), a test suite, and a deployment script.
-
-### Environment setup
 
 ### Project initialization and compilation
 
@@ -29,8 +27,7 @@ Compile and Test
 npx hardhat compile
 npx hardhat test --network hardhat
 REPORT_GAS=true npx hardhat test --network hardhat
-npx hardhat node
-npx hardhat run scripts/deploy.js
+
 ```
 **Please note** that testing must be done on the hardhat local network because the fixtures are not setup to deploy on zkSync but rather just the local simulated HRE.
 
