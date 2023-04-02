@@ -1,6 +1,3 @@
-import * as zksync from "zksync-web3";
-import * as ethers from "ethers";
-
 window.onload = function(){
 	document.getElementById("balanceBtn").onclick = async() => {
 		if (typeof window.ethereum !== 'undefined') {
@@ -168,9 +165,9 @@ const GAME_CONTRACT_ABI = [
 async function ConnectContract(){
 	console.log(GAME_CONTRACT_ABI)
 
-	const zkSyncProvider = new zksync.Provider("https://zksync2-testnet.zksync.dev");
-  	const signer = new zksync.Web3Provider(window.ethereum).getSigner();
-  	return contract = new zksync.Contract(
+	const zkSyncProvider = new zksync-web3.Provider("https://zksync2-testnet.zksync.dev");
+  	const signer = new zksync-web3.Web3Provider(window.ethereum).getSigner();
+  	return contract = new zksync-web3.Contract(
     	GAME_CONTRACT_ADDRESS,
     	GAME_CONTRACT_ABI,
     	signer
