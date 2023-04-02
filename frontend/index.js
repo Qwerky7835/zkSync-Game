@@ -1,3 +1,6 @@
+import * as zksync from "zksync-web3";
+import * as ethers from "ethers";
+
 window.onload = function(){
 	document.getElementById("balanceBtn").onclick = async() => {
 		if (typeof window.ethereum !== 'undefined') {
