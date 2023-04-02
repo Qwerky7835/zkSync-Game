@@ -8,4 +8,4 @@ While it is popular and convenient to use libraries and framworks like React, Ne
 
 This site is deployed by netlify. It is slated to be deployed on every git push but as fallback, you can manually click the button below.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Qwerky7835/zkSync-Game/tree/main/frontend)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Qwerky7835/zkSync-Game/frontend)

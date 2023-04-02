@@ -18,7 +18,7 @@ contract Game is Ownable{
 		token = new MatterToken();
 	}
 
-	function guess(uint user_guess) external payable {
+	function guess(uint user_guess) external payable{
 		require(msg.value == 10**15 wei, "exactly 0,001 eth must be sent");
 		
 		if(user_guess == secret_number){

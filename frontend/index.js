@@ -5,8 +5,8 @@ window.onload = function(){
 			const currentAccount = accounts[0];
 			const contract = ConnectContract();
 			console.log(contract)
-			var userInput = prompt(Guess a number);
-			consloe.log(userInput)
+			var userInput = prompt("Guess a number");
+			console.log(userInput)
 		} else{
 			alert("Install MetaMask or connect a provider");
 		}
@@ -16,10 +16,11 @@ window.onload = function(){
 		return parseInt(hexBalance, 16);
 	}
 }
+const GAME_CONTRACT_ADDRESS = "0x025747E11a5a0D70DA67c1F625BD442d13474363";
+const GAME_CONTRACT_ABI = fetch('./game_abi.json');
 
 async function ConnectContract(){
-	const GAME_CONTRACT_ADDRESS = "0x025747E11a5a0D70DA67c1F625BD442d13474363";
-	const GAME_CONTRACT_ABI = fetch('./game_abi.json');
+	console.log(GAME_CONTRACT_ABI)
 
 	const provider = new Provider("https://zksync2-testnet.zksync.dev");
   	const signer = new Web3Provider(window.ethereum).getSigner();
@@ -28,4 +29,9 @@ async function ConnectContract(){
     	GAME_CONTRACT_ABI,
     	signer
   	);
+}
+
+async function Transfer(player,input, contract){
+	await contract.methods.guess(input)
+		.send({from:player, to:GAME_CONTRACT_ADDRESS, value:ethers.utils.toWei("0.001", "ether")});
 }
