@@ -1,5 +1,3 @@
-import { Contract, Web3Provider, Provider } from "zksync-web3";
-
 window.onload = function(){
 	document.getElementById("balanceBtn").onclick = async() => {
 		if (typeof window.ethereum !== 'undefined') {
