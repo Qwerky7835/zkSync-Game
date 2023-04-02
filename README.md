@@ -2,6 +2,8 @@
 
 zkSnyc Game is a dApp which lets players guess a secret number and pays eth and custom tokens if the number is guessed correctly. Live version [here](https://rococo-sprite-0d206f.netlify.app/)! Deployed through curtesy of [Netlify](https://www.netlify.com/).
 
+**Bug Alert!** Currently the frornt end does not work due to the frontend being a pure HTML/CSS/JS site and zksync-web3 cannot be unpackaged and included as a script correctly.
+
 This dApp is a full stack project with a React frontend, connected to Solidity smart contract with the nifty [zksync-web3](https://www.npmjs.com/package/zksync-web3) and deployed on the zksync testnet. In order to demonstrate the full development lifecycle, this project comes with two Solidity contracts (Game.sol and MatterToken.sol), a test suite, and a deployment script.
 
 ### Project initialization and compilation
