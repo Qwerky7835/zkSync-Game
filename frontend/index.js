@@ -17,14 +17,16 @@ window.onload = function(){
 	}
 }
 const GAME_CONTRACT_ADDRESS = "0x025747E11a5a0D70DA67c1F625BD442d13474363";
-const GAME_CONTRACT_ABI = fetch('./game_abi.json');
+
 
 async function ConnectContract(){
+	const GAME_CONTRACT_ABI = await fetch('./game_abi.json');
 	console.log(GAME_CONTRACT_ABI)
 
-	const provider = new Provider("https://zksync2-testnet.zksync.dev");
-  	const signer = new Web3Provider(window.ethereum).getSigner();
-  	return contract = new Contract(
+
+	const zkSyncProvider = new zksync.Provider("https://zksync2-testnet.zksync.dev");
+  	const signer = new zksync.Web3Provider(window.ethereum).getSigner();
+  	return contract = new zksync.Contract(
     	GAME_CONTRACT_ADDRESS,
     	GAME_CONTRACT_ABI,
     	signer
