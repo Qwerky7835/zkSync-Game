@@ -167,7 +167,7 @@ const GAME_CONTRACT_ABI = [
 async function ConnectContract(){
 	console.log(GAME_CONTRACT_ABI)
 
-	const zkSyncProvider = new Provider("https://zksync2-testnet.zksync.dev");
+	const zkSyncProvider = new zkSync.Provider("https://zksync2-testnet.zksync.dev");
   	const signer = new Web3Provider(window.ethereum).getSigner();
   	return contract = new Contract(
     	GAME_CONTRACT_ADDRESS,
